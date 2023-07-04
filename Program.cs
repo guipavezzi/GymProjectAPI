@@ -1,4 +1,5 @@
 using APIGym.Data;
+using APIGym.Repositories.ExerciseRepositories;
 using APIGym.Repositories.WorkoutRepositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -27,6 +28,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<IWorkoutRepository, WorkoutRepository>();
+builder.Services.AddScoped<IExcerciseRepository, ExcerciseRepository>();
 
 var app = builder.Build();
 

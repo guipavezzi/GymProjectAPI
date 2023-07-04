@@ -15,9 +15,15 @@ namespace APIGym.Controllers
         }
 
         [HttpGet]
-        public IActionResult RetunWorkout()
+        public IActionResult RetunWorkouts()
         {
             return Ok(_workoutRepository.GetAll());
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult RetunWorkout(int id)
+        {
+            return Ok(_workoutRepository.GetById(id));
         }
     }
 }

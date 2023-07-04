@@ -12,9 +12,9 @@ namespace APIGym.Repositories.ExerciseRepositories
             _workContext = workContext;             
         }
 
-        public Exercise returnExcercise(int id)
+        public IEnumerable<Exercise> returnExcercises(int id)
         {
-            return (Exercise)_workContext.Exercises.Select(e => e.Workout.Id == id);
+            return _workContext.Exercises.Where(w => w.Workout.Id == id);
         }
     }
 }

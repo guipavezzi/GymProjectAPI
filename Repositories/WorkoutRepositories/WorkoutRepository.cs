@@ -15,5 +15,10 @@ namespace APIGym.Repositories.WorkoutRepositories
         {
             return _context.Workouts;
         }
+
+        public Workout GetById(int id)
+        {
+            return _context.Workouts.FirstOrDefault(workout => workout.Id == id);
+        }
     }
 }

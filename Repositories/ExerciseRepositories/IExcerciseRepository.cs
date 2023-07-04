@@ -4,6 +4,6 @@ namespace APIGym.Repositories.ExerciseRepositories
 {
     public interface IExcerciseRepository
     {
-        public Exercise returnExcercise(int Id);
+        public IEnumerable<Exercise> returnExcercises(int Id);
     }
 }
