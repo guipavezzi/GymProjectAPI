@@ -14,7 +14,7 @@ namespace APIGym.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult getExcercise(int id)
+        public IActionResult GetExcercise(int id)
         {
             return Ok(_excerciseRepository.returnExcercises(id));
         }
